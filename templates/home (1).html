@@ -1,0 +1,265 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<p class="ms-5"><i class="fa-solid fa-home me-2"></i>Dashboard</p>
+<div id="kt_app_content" class="app-content">
+
+	<div class="row g-5 g-xl-10">
+
+		<div class="col-xl-4 mb-xl-10">
+			<!--begin::Lists Widget 19-->
+			<div class="card card-flush h-xl-100">
+				<!--begin::Heading-->
+				<div class="card-header rounded bgi-no-repeat bgi-size-cover bgi-position-y-top bgi-position-x-center align-items-start h-250px" style="background-image:url("{% static 'media/svg/shapes/top-green.png' %}") data-bs-theme="light">
+					<!--begin::Title-->
+					<h3 class="card-title align-items-start flex-column text-white pt-15">
+						<span class="fw-bold fs-2x mb-3">Today's Stats</span>
+					</h3>
+				</div>
+				<div class="card-body mt-n20">
+
+					<div class="mt-n20 position-relative">
+
+						<div class="row g-3 g-lg-6">
+
+							<div class="col-6">
+
+								<div class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5">
+
+									<div class="symbol symbol-30px me-5 mb-8">
+										<span class="symbol-label">
+											<!--begin::Svg Icon | path: icons/duotune/medicine/med005.svg-->
+											<span class="svg-icon svg-icon-1 svg-icon-primary">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-h-square" viewBox="0 0 16 16">
+													<path d="M11 4.002V12H9.67V8.455H6.33V12H5V4.002h1.33v3.322h3.34V4.002H11Z" />
+													<path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z" />
+												</svg>
+											</span>
+										</span>
+									</div>
+									<div class="m-0">
+										<span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">{{HospitalCount}}</span>
+										<span class="text-gray-500 fw-semibold fs-6">Hospital Count</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5">
+									<div class="symbol symbol-30px me-5 mb-8">
+										<span class="symbol-label">
+											<span class="svg-icon svg-icon-1 svg-icon-primary">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-video2" viewBox="0 0 16 16">
+													<path d="M10 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+													<path d="M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2ZM1 3a1 1 0 0 1 1-1h2v2H1V3Zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3H5Zm-4-2h3v2H2a1 1 0 0 1-1-1v-1Zm3-1H1V8h3v2Zm0-3H1V5h3v2Z" />
+												</svg>
+											</span>
+
+										</span>
+									</div>
+									<!--end::Symbol-->
+
+									<div class="m-0">
+
+										<span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">{{DoctorsCount}}</span>
+
+										<!--begin::Desc-->
+										<span class="text-gray-500 fw-semibold fs-6">Doctors Count</span>
+
+									</div>
+
+								</div>
+
+							</div>
+
+
+							<div class="col-6">
+
+								<div class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5">
+
+									<div class="symbol symbol-30px me-5 mb-8">
+										<span class="symbol-label">
+											<!--begin::Svg Icon | path: icons/duotune/general/gen020.svg-->
+											<span class="svg-icon svg-icon-1 svg-icon-primary">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+													<path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
+													<path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+												</svg>
+											</span>
+
+										</span>
+									</div>
+									<div class="m-0">
+										<span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">{{PendingCases}}</span>
+										<span class="text-gray-500 fw-semibold fs-6">Pending Cases</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5">
+									<div class="symbol symbol-30px me-5 mb-8">
+										<span class="symbol-label">
+											<span class="svg-icon svg-icon-1 svg-icon-primary">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-check" viewBox="0 0 16 16">
+													<path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+													<path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z" />
+												</svg>
+											</span>
+										</span>
+									</div>
+									<div class="m-0">
+										<span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">{{CompletedCases}}</span>
+										<span class="text-gray-500 fw-semibold fs-6">Completed Cases</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-8 mb-5 mb-xl-10">
+			<div class="row g-5 g-xl-10">
+				<div class="col-xl-6 mb-xl-10">
+					<div id="kt_sliders_widget_1_slider" class="card card-flush carousel carousel-custom carousel-stretch slide h-xl-100" data-bs-ride="carousel" data-bs-interval="5000">
+						<div class="card-header pt-5">
+							<h4 class="card-title d-flex align-items-start flex-column">
+								<span class="card-label fw-bold text-gray-800">Today's appointments</span>
+								<span class="text-gray-400 mt-1 fw-bold fs-7">4 Surgeries, 3 OT</span>
+							</h4>
+							<div class="card-toolbar">
+								<ol class="p-0 m-0 carousel-indicators carousel-indicators-bullet carousel-indicators-active-primary">
+									<li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="0" class="active ms-1"></li>
+									<li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="1" class="ms-1"></li>
+									<li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="2" class="ms-1"></li>
+								</ol>
+							</div>
+						</div>
+						<div class="card-body py-6">
+							<div class="carousel-inner mt-n5">
+								<div class="carousel-item active show">
+									<div class="d-flex align-items-center mb-5">
+										<div class="w-80px flex-shrink-0 me-2">
+											<div class="min-h-auto ms-n3" id="kt_slider_widget_1_chart_1" style="height: 100px"></div>
+										</div>
+										<div class="m-0">
+											<h4 class="fw-bold text-gray-800 mb-3"></h4>
+											<div class="d-flex d-grid gap-5">
+												<div class="d-flex flex-column flex-shrink-0 me-4">
+													<span class="d-flex align-items-center fs-7 fw-bold text-gray-400 mb-2">
+														<span class="svg-icon svg-icon-6 svg-icon-gray-600 me-2">
+															{% comment %} <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor" />
+																<path d="M11.9343 12.5657L9.53696 14.963C9.22669 15.2733 9.18488 15.7619 9.43792 16.1204C9.7616 16.5789 10.4211 16.6334 10.8156 16.2342L14.3054 12.7029C14.6903 12.3134 14.6903 11.6866 14.3054 11.2971L10.8156 7.76582C10.4211 7.3666 9.7616 7.42107 9.43792 7.87962C9.18488 8.23809 9.22669 8.72669 9.53696 9.03696L11.9343 11.4343C12.2467 11.7467 12.2467 12.2533 11.9343 12.5657Z" fill="currentColor" />
+															</svg> {% endcomment %}
+                                                          
+                                                                <span b-1mtsuay2f9 class="menu-icon-warning">
+                                                                    <i class="fa-solid fa-spinner-third"></i>
+                                                                </span>
+                                                          
+														</span>
+														4 Surgeries
+													</span>
+												</div>
+												<div class="d-flex flex-column flex-shrink-0">
+													<span class="d-flex align-items-center fs-7 fw-bold text-gray-400 mb-2">
+														<span class="svg-icon svg-icon-6 svg-icon-gray-600 me-2">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor" />
+																<path d="M11.9343 12.5657L9.53696 14.963C9.22669 15.2733 9.18488 15.7619 9.43792 16.1204C9.7616 16.5789 10.4211 16.6334 10.8156 16.2342L14.3054 12.7029C14.6903 12.3134 14.6903 11.6866 14.3054 11.2971L10.8156 7.76582C10.4211 7.3666 9.7616 7.42107 9.43792 7.87962C9.18488 8.23809 9.22669 8.72669 9.53696 9.03696L11.9343 11.4343C12.2467 11.7467 12.2467 12.2533 11.9343 12.5657Z" fill="currentColor" />
+															</svg>
+														</span>
+														3 OT
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="m-0">
+										<a href="#" class="btn btn-sm btn-light me-2 mb-2">Close</a>
+										<a href="#" class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Details</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 mb-5 mb-xl-10">
+					<div id="kt_sliders_widget_2_slider" class="card card-flush carousel carousel-custom carousel-stretch slide h-xl-100" data-bs-ride="carousel" data-bs-interval="5500">
+						<div class="card-header pt-5">
+							<h4 class="card-title d-flex align-items-start flex-column">
+								<span class="card-label fw-bold text-gray-800">Today’s OTs</span>
+								<span class="text-gray-400 mt-1 fw-bold fs-7">3 OTs</span>
+							</h4>
+							<div class="card-toolbar">
+								<ol class="p-0 m-0 carousel-indicators carousel-indicators-bullet carousel-indicators-active-success">
+									<li data-bs-target="#kt_sliders_widget_2_slider" data-bs-slide-to="0" class="active ms-1"></li>
+									<li data-bs-target="#kt_sliders_widget_2_slider" data-bs-slide-to="1" class="ms-1"></li>
+									<li data-bs-target="#kt_sliders_widget_2_slider" data-bs-slide-to="2" class="ms-1"></li>
+								</ol>
+							</div>
+						</div>
+						<div class="card-body py-6">
+							<div class="carousel-inner">
+								<div class="carousel-item active show">
+									<div class="d-flex align-items-center mb-9">
+										<div class="symbol symbol-70px symbol-circle me-5">
+											<span class="symbol-label bg-light-success">
+												<span class="svg-icon svg-icon-3x svg-icon-success">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M16.925 3.90078V8.00077L12.025 10.8008V5.10078L15.525 3.10078C16.125 2.80078 16.925 3.20078 16.925 3.90078ZM2.525 13.5008L6.025 15.5008L10.925 12.7008L6.025 9.90078L2.525 11.9008C1.825 12.3008 1.825 13.2008 2.525 13.5008ZM18.025 19.7008V15.6008L13.125 12.8008V18.5008L16.625 20.5008C17.225 20.8008 18.025 20.4008 18.025 19.7008Z" fill="currentColor" />
+														<path opacity="0.3" d="M8.52499 3.10078L12.025 5.10078V10.8008L7.125 8.00077V3.90078C7.125 3.20078 7.92499 2.80078 8.52499 3.10078ZM7.42499 20.5008L10.925 18.5008V12.8008L6.02499 15.6008V19.7008C6.02499 20.4008 6.82499 20.8008 7.42499 20.5008ZM21.525 11.9008L18.025 9.90078L13.125 12.7008L18.025 15.5008L21.525 13.5008C22.225 13.2008 22.225 12.3008 21.525 11.9008Z" fill="currentColor" />
+													</svg>
+												</span>
+											</span>
+										</div>
+										<div class="m-0">
+											<h4 class="fw-bold text-gray-800 mb-3">3 OT</h4>
+											<div class="d-flex d-grid gap-5">
+												<div class="d-flex flex-column flex-shrink-0 me-4">
+													<span class="d-flex align-items-center fs-7 fw-bold text-gray-400 mb-2">
+														<span class="svg-icon svg-icon-6 svg-icon-gray-600 me-2">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor" />
+																<path d="M11.9343 12.5657L9.53696 14.963C9.22669 15.2733 9.18488 15.7619 9.43792 16.1204C9.7616 16.5789 10.4211 16.6334 10.8156 16.2342L14.3054 12.7029C14.6903 12.3134 14.6903 11.6866 14.3054 11.2971L10.8156 7.76582C10.4211 7.3666 9.7616 7.42107 9.43792 7.87962C9.18488 8.23809 9.22669 8.72669 9.53696 9.03696L11.9343 11.4343C12.2467 11.7467 12.2467 12.2533 11.9343 12.5657Z" fill="currentColor" />
+															</svg>
+														</span>
+														3 OT
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="m-0">
+										<a href="#" class="btn btn-sm btn-light me-2 mb-2">Close</a>
+										<a href="#" class="btn btn-sm btn-success mb-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Details</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card border-transparent" data-bs-theme="light" style="background-color: #1C325E;">
+				<div class="card-body d-flex ps-xl-15">
+					<div class="m-0">
+						<div class="position-relative fs-2x z-index-2 fw-bold text-white mb-7">
+							<span class="me-2">
+								Physicians can accept OT appointments right from their mobile in BookMyOT App.
+							</span>
+						</div>
+						<div class="mb-3">
+							<a href='#' class="btn btn-danger fw-semibold me-2" data-bs-toggle="modal" data-bs-target="#kt_modal_upgrade_plan">Get Started</a>
+							<a href="#" class="btn btn-color-white bg-white bg-opacity-15 bg-hover-opacity-25 fw-semibold">How to</a>
+						</div>
+					</div>
+					<img src="{% static 'book/assets/media/illustrations/sigma-1/17-dark.png' %}" class="position-absolute me-3 bottom-0 end-0 h-200px" alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+    
+{% endblock %}

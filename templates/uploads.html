@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF to DOCX Converter</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #download-notification {
+            display: none;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>code</th>
+            <th>name</th>
+            <th>specality</th>
+            <th>nothing</th>
+        </tr>
+        {% for x in result_date %}
+        <tr>
+            <td>{{x.code}}</td>
+            <td>{{x.description}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.specialitylistid}}</td>
+        </tr>
+    </table>
+</body>
+</html>
